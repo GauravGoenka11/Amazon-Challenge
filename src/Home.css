@@ -1,0 +1,25 @@
+/* .home {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1500px;
+  }
+   */
+.home_row{
+    display:flex;
+    z-index:1;
+    margin-left: 5px;
+    margin-right:5px;
+}
+
+.home_image{
+    width:100%;
+    z-index:-1;
+    margin-bottom: -150px;
+    /* https://web.dev/css-masking/#:~:text=CSS%20masking%20gives%20you%20the,effects%20without%20an%20image%20editor.&text=When%20you%20clip%20an%20element,the%20clipped%20area%20becomes%20invisible.
+    CSS masking gives you the option of using an image as a mask layer. This means that you can use an image, an SVG, or a gradient as your mask, to create interesting effects without an image edito */
+   /* in this mask image it taking t\from top to bootpm color to traqsnparent */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+   }

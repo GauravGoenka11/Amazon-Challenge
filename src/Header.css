@@ -1,16 +1,93 @@
 .header{
     height:60px;
+/* flex container expands items to fill available free space or shrinks them to prevent overflow. */
     display:flex;
     align-items: center;
     background-color: #131921;
+    /* position: sticky; is positioned based on the user's scroll position */
     position:sticky;
+    /* top property affects the vertical position of a positioned element. */
     top:0;
+    /* The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order. */
+    /* if we give z-indexs - value then it will be behind the text and image will be in front */
     z-index:100;
 }
 
 .header_logo{
     width:100px;
+    /* The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its container.
+    The object-fit property can have the following values:
+
+    fill - This is default. The replaced content is sized to fill the element's content box. If necessary, the object will be stretched or squished to fit
+    contain - The replaced content is scaled to maintain its aspect ratio while fitting within the element's content box
+    cover - The replaced content is sized to maintain its aspect ratio while filling the element's entire content box. The object will be clipped to fit
+    none - The replaced content is not resized
+    scale-down - The content is sized as if none or contain were specified (would result in a smaller concrete object size) */
+
     object-fit:contain;
-    margin:0 20px;
+    /* top right bottom left */
+    margin:0 20px; 
     margin-top:18px;
+}
+
+/* we have used flex for display for search,header_nav and header_options as flex because it will evenly distribute the space */
+.header_search{
+
+    display:flex;
+    /* flex: <positive-number>
+    flex: flex-grow flex-shrink flex-basis|auto|initial|inherit;
+    flex-grow : 1;    ➜ The div will grow in same proportion as the window-size       
+    flex-shrink : 1;  ➜ The div will shrink in same proportion as the window-size 
+    flex-basis : 0;   ➜ The div does not have a starting value as such and will 
+                     take up screen as per the screen size available for
+                     e.g:- if 3 divs are in the wrapper then each div will take 33%. */
+    /* flex:1 will streach as big as it can */
+     flex:1 ; 
+     align-items: center;
+     border-radius: 24px;
+     
+
+}
+
+.header_searchInput{
+    height:12px;
+    padding:10px;
+    border:none;
+    width:100%;
+}
+
+.header_searchIcon{
+    padding:5px;
+    height:22px;
+    background-color: #cd9042;
+}
+.header_option_LineOne{
+    font-size: 10px;
+}
+
+.header_option_LineTwo{
+    font-size:13px;
+    font-weight:800;
+}
+
+.header_optionBasket{
+    display:flex;
+    align-items:center;
+    color:white;
+}
+.header_basketCount{
+    margin-left:10px;
+    margin-right:10px;
+}
+.header_nav{
+    display:flex;
+    /* space-evenly is a value that can be assigned to the justify-content property to distribute flex items in such a way that the items have equal space around them. */
+    justify-content: space-evenly;
+}
+.header_option{
+    display:flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color:white;
 }
